@@ -16,7 +16,7 @@ public class LoginSteps {
     @Given("user provides invalid credentials")
     public void user_provides_invalid_credentials() {
          baseUri = "https://qwikcafedev.fc.qwikcilver.com";
-         invalidCredentials = "{ \"username\": \"invalidUser\", \"password\": \"invalidPass\" }";
+         invalidCredentials = "{ \"user_email\": \"invalidUser\", \"user_password\": \"invalidPass\" }";
     }
 
     @When("the user makes a POST request to the login endpoint")

@@ -32,7 +32,7 @@ public class LoginSteps {
 
     @Then("the user should receive an error message")
     public void the_user_should_receive_an_error_message() {
-        response.then().statusCode(200);
+        response.then().statusCode(401);
         String errorMessage = response.jsonPath().getString("msg");
         assertEquals("Invalid access", errorMessage);
         String expire = response.jsonPath().getString("expire");
